@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Link from 'next/link'; // Import Link wajib ada
 import { 
   LayoutDashboard, 
   UtensilsCrossed, 
@@ -18,7 +19,7 @@ export default function Dashboard() {
 
   return (
     <div className="flex min-h-screen bg-slate-50 text-slate-900">
-      {/* Sidebar - Fix Navigation */}
+      {/* Sidebar */}
       <aside className="w-64 bg-slate-900 text-white hidden md:block p-6 shadow-2xl">
         <div className="mb-10">
           <h1 className="text-2xl font-bold text-blue-400 tracking-tighter">NEXA-Sphere</h1>
@@ -26,22 +27,28 @@ export default function Dashboard() {
         </div>
         
         <nav className="space-y-2">
-          <button className="flex items-center w-full py-3.5 px-4 bg-blue-600 text-white rounded-2xl shadow-lg shadow-blue-900/50 transition-all">
+          {/* Dashboard (Active) */}
+          <Link href="/dashboard" className="flex items-center w-full py-3.5 px-4 bg-blue-600 text-white rounded-2xl shadow-lg shadow-blue-900/50 transition-all">
             <LayoutDashboard className="mr-3 w-5 h-5" /> 
             <span className="font-semibold text-sm">Dashboard</span>
-          </button>
-          <button className="flex items-center w-full py-3.5 px-4 text-slate-400 hover:text-white hover:bg-slate-800 rounded-2xl transition-all group">
+          </Link>
+
+          {/* Menu & Stok - Terhubung ke /menu */}
+          <Link href="/menu" className="flex items-center w-full py-3.5 px-4 text-slate-400 hover:text-white hover:bg-slate-800 rounded-2xl transition-all group">
             <UtensilsCrossed className="mr-3 w-5 h-5 group-hover:scale-110 transition-transform" /> 
             <span className="font-semibold text-sm">Menu & Stok</span>
-          </button>
-          <button className="flex items-center w-full py-3.5 px-4 text-slate-400 hover:text-white hover:bg-slate-800 rounded-2xl transition-all group">
+          </Link>
+
+          {/* AI Marketing - Terhubung ke /ai */}
+          <Link href="/ai" className="flex items-center w-full py-3.5 px-4 text-slate-400 hover:text-white hover:bg-slate-800 rounded-2xl transition-all group">
             <Megaphone className="mr-3 w-5 h-5 group-hover:scale-110 transition-transform" /> 
             <span className="font-semibold text-sm">AI Marketing</span>
-          </button>
-          <button className="flex items-center w-full py-3.5 px-4 text-slate-400 hover:text-white hover:bg-slate-800 rounded-2xl transition-all group">
+          </Link>
+
+          <Link href="/finance" className="flex items-center w-full py-3.5 px-4 text-slate-400 hover:text-white hover:bg-slate-800 rounded-2xl transition-all group">
             <Wallet className="mr-3 w-5 h-5 group-hover:scale-110 transition-transform" /> 
             <span className="font-semibold text-sm">Keuangan</span>
-          </button>
+          </Link>
         </nav>
 
         <div className="mt-auto pt-10">
@@ -64,6 +71,7 @@ export default function Dashboard() {
                 <Bot className="w-4 h-4 mr-2 text-blue-600" /> AI Insight: Stok susu tipis, aman buat 3 jam lagi.
             </p>
           </div>
+          {/* User Profile */}
           <div className="flex items-center space-x-4">
              <button className="p-3 bg-white border border-slate-200 rounded-2xl hover:bg-slate-50 transition relative">
                 <Bell className="w-5 h-5 text-slate-600" />
@@ -87,7 +95,7 @@ export default function Dashboard() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* AI Intelligence Card */}
+          {/* AI Predict Card - Link to AI Page */}
           <div className="lg:col-span-2 bg-slate-900 rounded-[2.5rem] p-10 text-white relative overflow-hidden border border-slate-800 shadow-2xl">
             <div className="relative z-10">
               <div className="flex items-center mb-6 text-blue-400 font-black uppercase text-xs tracking-widest">
@@ -98,41 +106,40 @@ export default function Dashboard() {
                 Besok diprediksi hujan petir jam 15.00. AI menyarankan promo <strong>"Kopi Anget Delivery"</strong> untuk menjaga stabilitas omzet.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-white text-slate-900 px-8 py-4 rounded-2xl font-black text-sm hover:bg-blue-50 transition-all shadow-xl">
-                  Aktifkan Promo Otomatis
-                </button>
+                <Link href="/ai" className="bg-white text-slate-900 px-8 py-4 rounded-2xl font-black text-sm hover:bg-blue-50 transition-all shadow-xl">
+                  Buka AI Control
+                </Link>
                 <button className="bg-slate-800 text-slate-300 border border-slate-700 px-8 py-4 rounded-2xl font-black text-sm hover:bg-slate-700 transition-all">
                   Lihat Grafik Tren
                 </button>
               </div>
             </div>
-            {/* AI Glow Effect */}
             <div className="absolute -right-20 -top-20 w-96 h-96 bg-blue-600 rounded-full blur-[150px] opacity-20"></div>
-            <div className="absolute -left-10 -bottom-10 w-64 h-64 bg-purple-600 rounded-full blur-[120px] opacity-10"></div>
           </div>
 
-          {/* AI Content Studio */}
-          <div className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-200 flex flex-col">
+          {/* AI Content Studio - Link to AI Page */}
+          <Link href="/ai" className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-200 flex flex-col group cursor-pointer">
              <div className="flex items-center justify-between mb-8">
                 <h3 className="font-black text-slate-900 uppercase text-sm tracking-tight">AI Content Hub</h3>
                 <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
              </div>
-             <div className="flex-1 aspect-square bg-slate-50 rounded-[2rem] mb-6 border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-center p-6 group cursor-pointer hover:border-blue-400 transition-colors">
+             <div className="flex-1 aspect-square bg-slate-50 rounded-[2rem] mb-6 border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-center p-6 group-hover:border-blue-400 transition-colors">
                 <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <Zap className="w-6 h-6 text-purple-500" />
                 </div>
                 <p className="text-xs font-bold text-slate-400 leading-relaxed uppercase tracking-tighter">Klik untuk generate konten Instagram otomatis</p>
              </div>
-             <button className="w-full bg-slate-900 text-white py-4 rounded-2xl font-black text-sm hover:bg-slate-800 transition-all shadow-lg">
-                Generate Visual Promo
-             </button>
-          </div>
+             <div className="w-full bg-slate-900 text-white py-4 rounded-2xl font-black text-sm text-center hover:bg-slate-800 transition-all shadow-lg">
+                Masuk AI Studio
+             </div>
+          </Link>
         </div>
       </main>
     </div>
   );
 }
 
+// Sub-komponen StatCard
 interface StatCardProps {
     title: string;
     value: string;
