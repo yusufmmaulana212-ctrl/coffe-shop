@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXA-Sphere | Solusi UMKM 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 font-sans text-slate-900">
+
+    <!-- Sidebar & Nav -->
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-slate-900 text-white hidden md:block">
+            <div class="p-6">
+                <h1 class="text-2xl font-bold text-blue-400">NEXA-Sphere</h1>
+                <p class="text-xs text-slate-400">AI Business Intelligence</p>
+            </div>
+            <nav class="mt-6">
+                <a href="#" class="flex items-center py-3 px-6 bg-blue-600 text-white">
+                    <i class="fas fa-chart-line mr-3"></i> Dashboard
+                </a>
+                <a href="#" class="flex items-center py-3 px-6 text-slate-300 hover:bg-slate-800">
+                    <i class="fas fa-utensils mr-3"></i> Menu & Stok
+                </a>
+                <a href="#" class="flex items-center py-3 px-6 text-slate-300 hover:bg-slate-800">
+                    <i class="fas fa-bullhorn mr-3"></i> AI Marketing
+                </a>
+                <a href="#" class="flex items-center py-3 px-6 text-slate-300 hover:bg-slate-800">
+                    <i class="fas fa-wallet mr-3"></i> Keuangan
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 md:p-8">
+            <!-- Top Bar -->
+            <header class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold">Selamat Siang, Yusuf!</h2>
+                    <p class="text-slate-500">Kondisi bisnismu hari ini sangat optimal.</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">● Online</span>
+                    <div class="w-10 h-10 rounded-full bg-slate-300 border border-slate-400"></div>
+                </div>
+            </header>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <p class="text-slate-500 text-sm">Omzet Hari Ini</p>
+                    <h3 class="text-2xl font-bold">Rp 3.450.000</h3>
+                    <span class="text-green-500 text-sm font-medium">↑ 12% vs Kemarin</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <p class="text-slate-500 text-sm">Total Pesanan</p>
+                    <h3 class="text-2xl font-bold">42</h3>
+                    <span class="text-slate-400 text-sm">Selesai: 38 | Proses: 4</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <p class="text-slate-500 text-sm">Sentimen AI</p>
+                    <h3 class="text-2xl font-bold text-blue-600">94%</h3>
+                    <span class="text-slate-400 text-sm">Berdasarkan 15 Review</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- AI Prediction Card -->
+                <div class="lg:col-span-2 bg-slate-900 text-white p-6 rounded-2xl shadow-xl overflow-hidden relative">
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-robot mr-2 text-blue-400"></i> AI Financial Twin
+                        </h3>
+                        <p class="text-slate-300 mb-6">"Prediksi: Permintaan es kopi akan naik 20% besok karena suhu udara diprediksi mencapai 34°C. Pastikan stok es batu cukup."</p>
+                        <div class="flex space-x-4">
+                            <button class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-lg text-sm font-semibold transition">Pesan Bahan Sekarang</button>
+                            <button class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-lg text-sm font-semibold transition">Lihat Detail Analisis</button>
+                        </div>
+                    </div>
+                    <!-- Decorative Circle -->
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl opacity-20"></div>
+                </div>
+
+                <!-- AI Marketing Hub -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h3 class="font-bold mb-4">AI Marketing Hub</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-dashed border-slate-300">
+                        <p class="text-xs text-slate-400 mb-2 font-mono">DRAF IKLAN OTOMATIS:</p>
+                        <p class="text-sm italic text-slate-700">"Haus melanda? Es Kopi Gayo kami siap segarkan siangmu! Promo Buy 1 Get 1 sampai jam 4 sore. ☕🔥"</p>
+                    </div>
+                    <button class="w-full mt-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 rounded-lg text-sm font-bold shadow-md">
+                        <i class="fab fa-instagram mr-2"></i> Posting ke Story
+                    </button>
+                </div>
+            </div>
+
+            <!-- Recent Orders Table -->
+            <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+                    <h3 class="font-bold text-lg">Pesanan Terbaru</h3>
+                    <button class="text-blue-600 text-sm font-semibold">Lihat Semua</button>
+                </div>
+                <table class="w-full text-left">
+                    <thead class="bg-slate-50 text-slate-500 text-xs uppercase">
+                        <tr>
+                            <th class="px-6 py-3">Menu</th>
+                            <th class="px-6 py-3">Sumber</th>
+                            <th class="px-6 py-3">Harga</th>
+                            <th class="px-6 py-3">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-sm">
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-slate-900">2x Es Kopi Gula Aren</td>
+                            <td class="px-6 py-4 text-orange-500 font-semibold"><i class="fas fa-bicycle mr-1"></i> GrabFood</td>
+                            <td class="px-6 py-4">Rp 44.000</td>
+                            <td class="px-6 py-4"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">Sedang Dibuat</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-slate-900">1x Nasi Ayam Geprek</td>
+                            <td class="px-6 py-4 text-blue-500 font-semibold"><i class="fas fa-utensils mr-1"></i> Dine-in</td>
+                            <td class="px-6 py-4">Rp 25.000</td>
+                            <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Selesai</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
